@@ -11,8 +11,6 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            height: 100%;
-            overflow: hidden;
         }
 
         /* Background Image */
@@ -22,101 +20,101 @@
             color: #333;
         }
 
-        /* Overlay to Darken Background for Better Text Visibility */
+        /* Overlay for Better Visibility */
         .overlay {
-            background: rgba(255, 255, 255, 0.8); /* White overlay with 80% opacity */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: rgba(249, 216, 53, 0.9); /* LEGO yellow */
+            padding: 50px 20px;
             text-align: center;
-            padding: 20px;
         }
 
-        /* Logo Section with Fade-in Animation */
-        .logo img {
-            max-width: 300px;
-            height: auto;
-            margin-bottom: 20px;
-            opacity: 0; /* Initially hidden */
-            animation: fadeIn 2s forwards; /* Fade-in animation */
-        }
-
-        /* Fade-in Animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Coming Soon Title */
+        /* Heading */
         h1 {
             font-size: 3rem;
-            margin: 20px 0;
-            color: #1976d2; /* LEGO Blue */
+            color: #007dc3; /* LEGO blue */
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            margin-bottom: 20px;
         }
 
-        /* Description with Further Reduced Line Spacing */
+        /* Subheading */
         p {
-            font-size: 1.3rem;
-            line-height: 1.2; /* Further reduced line height */
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #333;
             margin: 10px 0 30px;
-            color: #555;
         }
 
         /* Email Form */
         form {
             display: flex;
             gap: 10px;
-            flex-wrap: wrap;
             justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
         }
 
         input[type="email"] {
             padding: 12px;
             font-size: 1.2rem;
-            border: 2px solid #1976d2; /* LEGO Blue */
+            border: 2px solid #007dc3; /* LEGO blue */
             border-radius: 5px;
             outline: none;
-            transition: border 0.3s ease-in-out;
-        }
-
-        input[type="email"]:focus {
-            border-color: #f44336; /* LEGO Red */
+            width: 300px;
         }
 
         button {
             padding: 12px 25px;
             font-size: 1.2rem;
-            background-color: #f44336; /* LEGO Red */
+            background-color: #f94c57; /* LEGO red */
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #d32f2f;
+            background-color: #c33745;
+        }
+
+        /* Product Concepts Section */
+        .concepts {
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .concepts h2 {
+            font-size: 2.5rem;
+            color: #007dc3;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .grid img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #007dc3;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid img:hover {
+            transform: scale(1.05);
         }
 
         /* Footer */
         .footer {
             margin-top: 30px;
             font-size: 1rem;
-            color: #777;
+            color: #555;
+            text-align: center;
         }
     </style>
 </head>
@@ -125,7 +123,7 @@
         <div>
             <!-- Logo -->
             <div class="logo">
-                <img src="https://store-41dqa3uiry.mybigcommerce.com/content/Bible%20Bricks%20%28Updated%20Color%29.png" alt="Bible Bricks Logo">
+                <img src="https://store-41dqa3uiry.mybigcommerce.com/content/Bible%20Bricks%20%28Updated%20Color%29.png" alt="Bible Bricks Logo" style="max-width: 300px; margin-bottom: 20px;">
             </div>
             <!-- Title -->
             <h1>Coming Soon!</h1>
@@ -137,11 +135,24 @@
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Notify Me</button>
             </form>
-            <!-- Footer -->
-            <div class="footer">
-                © 2024 Bible Bricks. All rights reserved.
-            </div>
         </div>
+    </div>
+    <!-- Product Concepts Section -->
+    <div class="concepts">
+        <h2>Product Concepts</h2>
+        <div class="grid">
+            <img src="https://i.imgur.com/s2Mbz0Q.png" alt="LEGO Concept 1">
+            <img src="https://i.imgur.com/u9sR1BW.png" alt="LEGO Concept 2">
+            <img src="https://i.imgur.com/GpbaDwz.png" alt="LEGO Concept 3">
+            <img src="https://i.imgur.com/rbz8WrO.png" alt="LEGO Concept 3">
+            <img src="https://i.imgur.com/ynNVUqe.png" alt="LEGO Concept 3">
+            <img src="https://i.imgur.com/llkaUOj.png" alt="LEGO Concept 3">
+            <img src="https://i.imgur.com/iEcPkpc.png" alt="LEGO Concept 3">
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Bible Bricks. All rights reserved.
     </div>
 </body>
 </html>
